@@ -9,7 +9,7 @@ def hash_url(url,id):
 #this function takes 2 variables and check if the validation period is not expired compared to the current date
 def is_valid(creation_day, duration):
           d=creation_day.split("-")
-          a = date(int(d[0]),1,10)
+          a = date(int(d[0]),int(d[1]),int(d[2]))
           today = date.today()
           b = date(int(today.strftime("%Y")),int(today.strftime("%m")),int(today.strftime("%d")))
           if((b-a).days>duration):
