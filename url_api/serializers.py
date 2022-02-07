@@ -5,6 +5,7 @@ from .models import URL
 class URLSerializer(serializers.ModelSerializer):
          class Meta:
                    model= URL
-                   fields=['url_id', 'original_url', 'hashed_url', 'validation_period', 'creation_date','valid']
+                   fields=[ 'original_url', 'hashed_url', 'validation_period', 'creation_date','valid']
+                   lookup_field = 'hashed_url'
 
          
